@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:System San Francisco Display 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -93,8 +93,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Workspace Varibles
-set $ws1 "1 "
-set $ws2 "2 "
+set $ws1 "1"
+set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -165,36 +165,69 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#Rodi DMENU replacement
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -paddig 800 -width 100 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+
+#Color of I3
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# window colors
+#type                   border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #0000ff
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #0000ff
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #0000ff
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #0000ff
+
+hide_edge_borders both
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
         tray_output primary
+	colors {
+		background $bg-color
+		separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	}
 }
-
-
 
 # Wallpaper
 exec_always feh --bg-scale ~/Pictures/Vaporwave4.jpg
 
 # Lock Screen
-bindsym $mod+shift+x exec i3lock
-
+bindsym $mod+shift+x exec i3lock --color "#000000"
 
 # arander
 
 # FN buttons
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+#bindsym $mod+f5 exec  xrandr --output eDP-1-1 --brightness 0.7  # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xrandr --output eDP-1-1 --brightness 0.5 # decrease screen brightness
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+#bindsym XF86AudioPlay exec playerctl play
+#bindsym XF86AudioPause exec playerctl pause
+#bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
+
+#transpearancy
+exec compton
+
+#tracpad
+exec xinput set-prop 11 "Synaptics Palm Dimensions" 3 3
+exec xinput set-prop 11 "Synaptics Palm Detection" 1
+
