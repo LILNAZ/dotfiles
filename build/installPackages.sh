@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# Made for Fedora 38
+#
+
 # Update existing package
 dnf update -y
 
@@ -29,7 +33,7 @@ dnf install nautilus eog gnome-calculator gnome-control-center gnome-settings-da
 dnf install tree htop tldr neofetch git gh minicom dhcp-client openssh openssl nmap nmap-ncat sipcalc mc ranger -y
 
 # Install compression tools
-dnf install tar unzip xz bzip2 zip p7zip unrar -y
+dnf install tar unzip xz bzip2 zip p7zip unrar zlib xar -y
 
 # Install text editor
 dnf install nano vim gnome-text-editor -y
@@ -55,7 +59,21 @@ dnf install steam -y
 dnf install discord -y
 
 # Install Music player
-echo todo...
+dnf install strawberry -y
 
 # Install fonts
-echo todo...
+## https://www.nerdfonts.com/#home
+
+dnf install dejavu-fonts-all fontawesome-fonts 
+
+## UI and System font
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg
+
+#zlib -d < SF-Pro.dmg
+#zlib -d < SF-Mono.dmg
+
+#xar -x SF-Pro/SFProFonts/SF\ Pro\ Fonts.pkg
+
+# Install password manager
+dnf install keepassxc -y
