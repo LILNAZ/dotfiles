@@ -11,7 +11,7 @@ dnf update -y
 dnf install gdm -y
 
 # Install Window Manager
-dnf install i3 dmenu polybar -y
+dnf install i3 dmenu polybar feh -y
 
 # Install base GUI tools
 ## File explore: nautilus
