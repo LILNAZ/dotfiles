@@ -33,7 +33,7 @@ dnf install nautilus eog gnome-calculator gnome-control-center gnome-settings-da
 dnf install tree htop tldr neofetch git gh minicom dhcp-client openssh openssl nmap nmap-ncat sipcalc mc ranger -y
 
 # Install compression tools
-dnf install tar unzip xz bzip2 zip p7zip unrar zlib xar -y
+dnf install tar unzip xz bzip2 zip p7zip unrar zlib xar qpdf -y
 
 # Install text editor
 dnf install nano vim gnome-text-editor -y
