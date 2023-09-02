@@ -11,7 +11,7 @@ dnf update -y
 dnf install gdm -y
 
 # Install Window Manager
-dnf install i3 dmenu polybar feh -y
+dnf install i3 rofi polybar feh -y
 
 # Install base GUI tools
 ## File explore: nautilus
@@ -49,14 +49,6 @@ dnf install libreoffice-writer libreoffice-clac libreoffice-langpack-en libreoff
 
 # Install Python
 dnf install python3 python3-pip -y
-
-# Install Steam
-dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-dnf install steam -y
-
-# Install discord
-#dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-dnf install discord -y
 
 # Install Music player
 dnf install strawberry -y
