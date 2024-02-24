@@ -24,8 +24,8 @@ dnf install tuigreet -y
 # Install Window Manager
 ## Window Manager:						sway		-- SwayWM
 ## Window Manager service:				sway-systemd
-## Launcher: 							wofi 		-- rofi for wayland
-## Menu: 								wofi 		-- rofi for wayland
+## Launcher: 							rofi 		-- rofi for wayland
+## Menu: 								rofi 		-- rofi for wayland
 ## Top bar: 							Waybar		-- Like a taskbar
 ## Wallpaper manager: 					swaybg
 ## Display and output manage:			wdisplays	-- Screen configuration
@@ -34,7 +34,7 @@ dnf install tuigreet -y
 ## Brightness:							brightnessctl
 ## Lock screen:							swaylock
 ## Window Manger addon dependencies:	rust cargo
-dnf install sway sway-systemd wofi waybar swaybg wdisplays mako grim brightnessctl swaylock rust cargo -y
+dnf install sway sway-systemd rofi waybar swaybg wdisplays mako grim brightnessctl swaylock rust cargo -y
 
 # Install base TUI tools
 ## shell:					zsh
