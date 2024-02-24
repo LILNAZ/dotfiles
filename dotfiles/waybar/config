@@ -1,0 +1,84 @@
+{
+	"height": 30,
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": [
+		"idle_inhibitor",
+		"pulseaudio",
+		//"backlight",
+		//"battery",
+		"network",
+		"tray"
+	],
+
+	// Modules configuration
+	"sway/workspaces": {
+		"disable-scroll": false,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5 ",
+			"6": "6 ",
+			"7": "7 ",
+			"8": "8 ",
+			"9": "9 ",
+			"10": "10",
+			"urgent": " ",
+			"default": " "
+		}
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": " ",
+			"deactivated": " "
+		}
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%H:%M}",
+	"format-alt": "{:%A, %B %d, %Y}"
+	},
+	"cpu": {
+		"format": "{usage}%",
+		"tooltip": false
+	},
+	"memory": {
+		"format": "{}%"
+	},
+	"pulseaudio": {
+		"format": "{volume}%",
+		"format-bluetooth": "Vol: {volume}%",
+		"nospacing": 1,
+		"tooltip-format": "Volume : {volume}%",
+		"format-muted": "Muted ",
+		"format-icons": {
+			"headphone": " ",
+			"default": [
+				"󰕿 ",
+				"󰖀 ",
+				"󰕾 "
+			]
+		},
+		"on-click": "pavucontrol",
+		"scroll-step": 1
+	},
+	"network": {
+		"format-wifi": "直 ",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
+		"format-linked": "{ifname} (No IP)  ",
+		"format-disconnected": "睊 ",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip-format": "{essid} {signalStrength}%"
+	}
+}
