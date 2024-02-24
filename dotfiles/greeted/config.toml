@@ -1,0 +1,7 @@
+# Location: /etc/greetd/config.toml
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --cmd sway-run"
+user = "greetd"
