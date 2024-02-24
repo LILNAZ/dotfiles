@@ -1,2 +1,4 @@
-# dotfiles
+# dotfiles WIP
+**THIS REPO IS UNDER DEVELOPMENT AND EVERYTHING IS NOW EXPECTED TO BE BROKEN**
+
 All of my dotfiles goes hear.
