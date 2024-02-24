@@ -23,7 +23,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu rofi -show drun
 
 ### Output configuration
 #
@@ -205,18 +205,20 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-	position top
+# bar {
+# 	position top
 
-	# When the status_command prints a new line to stdout, swaybar updates.
-	# The default just shows the current date and time.
-	status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+# 	# When the status_command prints a new line to stdout, swaybar updates.
+# 	# The default just shows the current date and time.
+# 	status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
-	colors {
-		statusline #ffffff
-		background #323232
-		inactive_workspace #32323200 #32323200 #5c5c5c
-	}
-}
+# 	colors {
+# 		statusline #ffffff
+# 		background #323232
+# 		inactive_workspace #32323200 #32323200 #5c5c5c
+# 	}
+# }
+# run waybar insted of sway-bar
+exec waybar
 
 include /etc/sway/config.d/*
