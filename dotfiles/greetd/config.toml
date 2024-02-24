@@ -1,4 +1,7 @@
 # Location: /etc/greetd/config.toml
+# Ower: greetd
+# Group: greetd
+
 [terminal]
 vt = 1
 
