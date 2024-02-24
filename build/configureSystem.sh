@@ -8,3 +8,6 @@ chsh -s /bin/zsh $USER
 
 # enable tuigreeded
 systemctl enable greetd.service
+
+# Set graphical as default target
+systemctl set-default graphical.target
