@@ -1,7 +1,8 @@
 #!/bin/sh
+# Privileges: Elevated need to be ran as root
 
 #
-# Made for Fedora 39
+# Made and tested for Fedora 39
 #
 
 # Update existing package
@@ -21,18 +22,19 @@ dnf install tar unzip xz bzip2 zip p7zip unrar zlib xar qpdf -y
 dnf install tuigreet -y
 
 # Install Window Manager
-## Window Manager:				sway		-- SwayWM
-## Window Manager service:		sway-systemd
-## Launcher: 					wofi 		-- rofi for wayland
-## Menu: 						wofi 		-- rofi for wayland
-## Top bar: 					Waybar		-- Like a taskbar
-## Wallpaper manager: 			swaybg
-## Display and output manage:	wdisplays	-- Screen configuration
-## Notifications:				mako
-## Screenshot:					grim
-## Brightness:					brightnessctl
-## Lock screen:					swaylock
-dnf install sawy sway-systemd wofi waybar swaybg wdisplays mako grim brightnessctl swaylock -y
+## Window Manager:						sway		-- SwayWM
+## Window Manager service:				sway-systemd
+## Launcher: 							wofi 		-- rofi for wayland
+## Menu: 								wofi 		-- rofi for wayland
+## Top bar: 							Waybar		-- Like a taskbar
+## Wallpaper manager: 					swaybg
+## Display and output manage:			wdisplays	-- Screen configuration
+## Notifications:						mako
+## Screenshot:							grim
+## Brightness:							brightnessctl
+## Lock screen:							swaylock
+## Window Manger addon dependencies:	rust cargo
+dnf install sway sway-systemd wofi waybar swaybg wdisplays mako grim brightnessctl swaylock rust cargo -y
 
 # Install base TUI tools
 ## shell:					zsh
@@ -58,11 +60,11 @@ dnf install zsh zsh-autosuggestions zsh-syntax-highlighting wl-clipboard qalcula
 ## PDF reader: 			evince
 ## Web browser: 		firefox
 ## Terminal: 			alacritty 
-## Office:				libreoffice-writer libreoffice-clac
+## Office:				libreoffice-writer libreoffice-calc
 ## Office addons:		libreoffice-langpack-en libreoffice-langpack-sv
 ## Music player:		quodlibet quodlibet-zsh-completion
 ## Password manager:	keepassxc
-dnf install nautilus sushi imv mpv qalculate-gtk evince firefox alacritty libreoffice-writer libreoffice-clac libreoffice-langpack-en libreoffice-langpack-sv quodlibet quodlibet-zsh-completion keepassxc -y
+dnf install nautilus sushi imv mpv qalculate-gtk evince firefox alacritty libreoffice-writer libreoffice-calc libreoffice-langpack-en libreoffice-langpack-sv quodlibet quodlibet-zsh-completion keepassxc -y
 
 ## Install VS Code
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
