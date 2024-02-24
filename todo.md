@@ -1,5 +1,8 @@
 # Todo dotfiles and Linux Install
 
+## Missing features
+- [ ] Clipboard between applications (VS Code to Alecritty dose not work)
+
 ## Base system install
 - [ ] Create install script that installs required packages
 	- [X] Create base installation for Fedora
@@ -7,15 +10,21 @@
 	- [ ] Install non dnf packages
 		- [ ] Plex Amp
 		- [ ] Obsidian notes
+		- [ ] swaysome (`sudo dnf install rust cargo` to install dependencies)
+		- [ ] sworkstyle (`sudo dnf install rust cargo` to install dependencies)
 - [ ] Create script that configures packages and moves dotfiles to correct places
 	- Using GNU Stow for dotfile management from this git repo
+	- Alternative is to use Ansible and create roles for etch application group/specific application to get dotfiles in correct locations
+- [ ] Create a first run script
+	- [ ] Run Display and output manage to set resolution and displays
 
-## Create dotfiles
+
+## Create initial dotfiles
 - [ ] UI
-	- [ ] tuigreet `/etc/greetd/config.toml`
-	- [ ] Sway
-	- [ ] Waybar
-	- [ ] wofi
+	- [X] tuigreet `/etc/greetd/config.toml`
+	- [X] Sway
+	- [X] Waybar
+	- [ ] rofi
 	- [ ] swaylock
 - [ ] Applications
 	- [ ] Alacritty
@@ -26,10 +35,12 @@
 	- [ ] ZSH
 		- [ ] PS1
 	- [ ] TMUX
-	- [ ] VIM
+	- [ ] VIM vs NeoVIM
 	- [ ] git
 	- [ ] gh
 
 - [ ] Theming
 	- [ ] GTK
-	- [ ] 
+	- [ ] Alecritty
+	- [ ] rofi
+	- [ ] sway
