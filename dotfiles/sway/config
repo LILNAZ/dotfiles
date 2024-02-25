@@ -8,6 +8,7 @@
 input * {
 	xkb_layout "se"
 }
+input type:keyboard xkb_numlock enabled
 
 ### Variables
 #
@@ -218,7 +219,7 @@ bindsym $mod+r mode "resize"
 # 		inactive_workspace #32323200 #32323200 #5c5c5c
 # 	}
 # }
-# run waybar insted of sway-bar
+# run waybar instead of sway-bar
 exec waybar
 
 include /etc/sway/config.d/*
