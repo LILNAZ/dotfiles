@@ -1,5 +1,14 @@
 # Inspiration
 
+## Info
+https://wiki.archlinux.org/title/Sway
+
+## Clipboard
+https://wiki.archlinux.org/title/Sway#Clipboard
+https://www.reddit.com/r/swaywm/comments/inrhhq/hows_clipboard_mechanism_works_in_sway/
+https://www.reddit.com/r/swaywm/comments/z4lq76/clipboard_manager_for_waylandswaywm/
+https://wiki.archlinux.org/title/Clipboard
+
 ## Rofi or dmenu
 https://gitlab.com/dwt1/dmscripts/-/tree/master
 
@@ -53,3 +62,8 @@ I am think of starting with dracula, but as they have themes for almost anything
 - ncmpcpp
 - https://github.com/jeffreytse/zsh-vi-mode
 - VsCodeVim
+- https://github.com/adi1090x/rofi
+- https://github.com/P3rf/rofi-network-manager
+- https://github.com/HarHarLinks/wireguard-rofi-waybar
+- https://github.com/lahwaacz/arch-wiki-docs
+- https://github.com/Gamesmes90/arch-wiki-docset
