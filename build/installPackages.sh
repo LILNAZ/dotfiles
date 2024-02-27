@@ -34,7 +34,8 @@ dnf install tuigreet -y
 ## Brightness:							brightnessctl
 ## Lock screen:							swaylock
 ## Window Manger addon dependencies:	rust cargo
-dnf install sway sway-systemd rofi waybar swaybg wdisplays mako grim brightnessctl swaylock rust cargo -y
+## Clipboard manager:					clipman
+dnf install sway sway-systemd rofi waybar swaybg wdisplays mako grim brightnessctl swaylock clipman rust cargo -y
 
 # Install base TUI tools
 ## shell:					zsh

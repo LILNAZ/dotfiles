@@ -1,7 +1,8 @@
 # Todo dotfiles and Linux Install
 
 ## Missing features
-- [ ] Clipboard between applications (VS Code to Alecritty dose not work)
+- [X] Clipboard between applications (VS Code to Alecritty dose not work after one is closed)
+	- [ ] Would like to not save all clipboard history due to secrets being copied
 
 ## Base system install
 - [ ] Create install script that installs required packages

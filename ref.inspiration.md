@@ -9,6 +9,10 @@ https://www.reddit.com/r/swaywm/comments/inrhhq/hows_clipboard_mechanism_works_i
 https://www.reddit.com/r/swaywm/comments/z4lq76/clipboard_manager_for_waylandswaywm/
 https://wiki.archlinux.org/title/Clipboard
 
+Look in to the project below to have clipboard persist and maybe not save history
+- https://git.sr.ht/~whynothugo/clipmon
+- https://github.com/Linus789/wl-clip-persist
+
 ## Rofi or dmenu
 https://gitlab.com/dwt1/dmscripts/-/tree/master
 
