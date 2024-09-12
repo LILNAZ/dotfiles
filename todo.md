@@ -11,6 +11,7 @@
 	- [ ] Install non dnf packages
 		- [ ] Plex Amp
 		- [ ] Obsidian notes
+		- [ ] Balena Etcher
 		- [ ] swaysome (`sudo dnf install rust cargo` to install dependencies)
 		- [ ] sworkstyle (`sudo dnf install rust cargo` to install dependencies)
 - [ ] Create script that configures packages and moves dotfiles to correct places
@@ -45,3 +46,13 @@
 	- [ ] Alecritty
 	- [ ] rofi
 	- [ ] sway
+
+## Devbox
+- [ ] k3s
+	- [ ] helm
+- [ ] git
+- [ ] gh
+- [ ] podman
+- [ ] codeer
+- [ ] kube-virt
+- [ ] VS Code and extenstions
