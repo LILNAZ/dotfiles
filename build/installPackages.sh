@@ -60,12 +60,12 @@ dnf install zsh zsh-autosuggestions zsh-syntax-highlighting wl-clipboard qalcula
 ## Calculator: 			qalculate-gtk
 ## PDF reader: 			evince
 ## Web browser: 		firefox
-## Terminal: 			alacritty 
+## Terminal: 			kitty 
 ## Office:				libreoffice-writer libreoffice-calc
 ## Office addons:		libreoffice-langpack-en libreoffice-langpack-sv
 ## Music player:		quodlibet quodlibet-zsh-completion
 ## Password manager:	keepassxc
-dnf install nautilus sushi imv mpv qalculate-gtk evince firefox alacritty libreoffice-writer libreoffice-calc libreoffice-langpack-en libreoffice-langpack-sv quodlibet quodlibet-zsh-completion keepassxc -y
+dnf install nautilus sushi imv mpv qalculate-gtk evince firefox kitty libreoffice-writer libreoffice-calc libreoffice-langpack-en libreoffice-langpack-sv quodlibet quodlibet-zsh-completion keepassxc -y
 
 ## Install VS Code
 rpm --import https://packages.microsoft.com/keys/microsoft.asc

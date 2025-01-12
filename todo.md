@@ -29,7 +29,7 @@
 	- [ ] rofi
 	- [ ] swaylock
 - [ ] Applications
-	- [ ] Alacritty
+	- [ ] kitty
 	- [ ] KeePassXC
 	- [ ] QuodLibet
 	- [ ] Firefox
