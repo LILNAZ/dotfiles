@@ -19,27 +19,37 @@ dnf install dhcp-client NetworkManager network-manager-applet nm-connection-edit
 dnf install tar unzip xz bzip2 zip p7zip unrar zlib xar qpdf -y
 
 # Install Display/login manager
-dnf install tuigreet -y
+dnf install gdm -y
+
+# COPR for hyperland
+dnf copr enable solopasha/hyprland 
 
 # Install Window Manager
-## Window Manager:						sway		-- SwayWM
-## Window Manager service:				sway-systemd
-## Launcher: 							rofi 		-- rofi for wayland
-## Menu: 								rofi 		-- rofi for wayland
+## Window Manager:						hyprland			-- COPR hyperland VM
+### Official plugins:					hyprland-plugins	-- COPR
+### Idle:								hypridle			-- COPR
+### Lock:								hyprlock			-- COPR
+### "UAC":								hyprpolkitagent		-- COPR
+### Extra plugins:
+#### Workspace name						hyprland-autoname-workspaces	-- COPR
+#### Workspace switch:					hyprnome			-- COPR
+### Screenshot:							hyprshoot			-- COPR
+### Wallpaper:							hyprpaper			-- COPR
+### Wallpaper GUI:						waypaper			-- COPR
 ## Top bar: 							Waybar		-- Like a taskbar
-## Wallpaper manager: 					swaybg
-## Display and output manage:			wdisplays	-- Screen configuration
+dnf install hyprland hyprland-plugins hypridle hyprlock hyprpolkitagent hyprland-autoname-workspaces hyprnome hyprshoot hyprpaper waypaper Waybar -y
+
+# Install must have Window Manger tools
 ## Notifications:						mako
-## Screenshot:							grim
-## Brightness:							brightnessctl
-## Lock screen:							swaylock
-## Window Manger addon dependencies:	rust cargo
+## Pipewire:							pipewire wireplumber
+## QT Support:							qt5-wayland qt6-wayland
 ## Clipboard manager:					clipman
-dnf install sway sway-systemd rofi waybar swaybg wdisplays mako grim brightnessctl swaylock clipman rust cargo -y
+## Display and output manage:			wdisplays	-- Screen configuration
+## Brightness:							brightnessctl
+## Launcher: 							wofi 		-- rofi for wayland
+dnf install mako pipewire wireplumber qt5-wayland qt6-wayland clipman wdisplays brightnessctl wofi -y
 
 # Install base TUI tools
-## shell:					zsh
-## Shell tools:				zsh-autosuggestions zsh-syntax-highlighting
 ## Clipboard:				wl-clipboard
 ## Calculator:				qalculate
 ## Text editor:				vim-enhanced nano
@@ -49,7 +59,7 @@ dnf install sway sway-systemd rofi waybar swaybg wdisplays mako grim brightnessc
 ## git:						git gh
 ## Networking:				openssh openssl nmap nmap-ncat sipcalc
 ## File explorer:			ranger
-dnf install zsh zsh-autosuggestions zsh-syntax-highlighting wl-clipboard qalculate tree htop tmux neofetch git gh openssh openssl nmap nmap-ncat sipcalc ranger -y
+dnf install wl-clipboard qalculate tree htop tmux neofetch git gh openssh openssl nmap nmap-ncat sipcalc ranger -y
 
 # Install base GUI tools
 ## Note: GTK flavour of applications have been chosen
